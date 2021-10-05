@@ -1,6 +1,7 @@
 /// <reference path="../../../.vscode.js"/>
 
 import { RouterBuilder } from "@de.pinuts.apirouter/shared/routing.es6";
+import { getCurrentUserEntry } from "@de.pinuts.cmsbs.auth2/rest/index.mjs";
 
 /**
  * @param {HttpRequest} req 
@@ -8,9 +9,7 @@ import { RouterBuilder } from "@de.pinuts.apirouter/shared/routing.es6";
  */
 const auth = (req, res) => {
     const originalUri = new java.net.URI(req.header('x-original-uri'));
-
-    /** @type {Entry} */
-    const entry = new de.pinuts.cmsbs.lib.plugin.SessionHandler().getUserEntry();
+    const entry = getCurrentUserEntry(req);
 
     if (!entry) {
         return res.sendError(401);
