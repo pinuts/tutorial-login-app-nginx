@@ -44,8 +44,8 @@
   },
   "logoutFederated": false,
   "logoutLink": false,
-  "onLoginGuiAction": "reload",
-  "onLoginGuiActionRedirect": "",
+  "onLoginGuiAction": "redirect",
+  "onLoginGuiActionRedirect": "/private",
   "permissionSegments": "permission",
   "profileLinkText": {
     "de": "Profilseite",
