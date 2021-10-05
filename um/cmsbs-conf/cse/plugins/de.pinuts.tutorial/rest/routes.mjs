@@ -8,8 +8,8 @@ import { RouterBuilder } from "@de.pinuts.apirouter/shared/routing.es6";
  */
 const auth = (req, res) => {
     const originalUri = req.header('x-original-uri');
-    console.log(`/auth: "${originalUri}"; headers =`, req.headers);
-    res.status = 401;
+    console.log(`/auth: "${originalUri}"; headers =`, req.headers, req.session);
+    // res.status = 401;
 }
 
 de.pinuts.tutorial.apiController = new RouterBuilder()

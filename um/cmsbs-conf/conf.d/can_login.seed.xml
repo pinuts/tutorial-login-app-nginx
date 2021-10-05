@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<um>
+  <vchannels>
+    <vchannel id="can_login" preventsEntryRemoval="false">
+      <title>Can Login</title>
+      <description/>
+      <query>defined(email)</query>
+    </vchannel>
+  </vchannels>
+</um>

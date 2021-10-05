@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<um>
+  <plugininstances>
+    <plugininstance enabled="true" name="my-app" pluginTypeName="de.pinuts.cmsbs.auth2">
+      <title>My App</title>
+      <description/>
+      <config>{
+  "apiRestUrlPrefix": "",
+  "attrCookie": "cookie",
+  "attrLogin": "email",
+  "attrPass": "password",
+  "checkPublisherUrls": false,
+  "css": {
+    "background-color": "#FFFFFF",
+    "color": "#000000",
+    "font-family": "Arial, Helvetica, sans-serif"
+  },
+  "designSet": "auth2_base",
+  "designSet2": "auth2_base",
+  "entryPool": "can_login",
+  "labelLogin": {
+    "de": "E-Mail",
+    "en": "E-Mail"
+  },
+  "labelLogoutBtn": {
+    "de": "Abmelden",
+    "en": "Logout"
+  },
+  "labelPass": {
+    "de": "Passwort",
+    "en": "Password"
+  },
+  "labelRememberMe": {
+    "de": "Anmeldung merken",
+    "en": "Rember Me"
+  },
+  "labelSubmitBtn": {
+    "de": "Anmelden",
+    "en": "Login"
+  },
+  "loginError": {
+    "de": "Die Eingaben konnten nicht zugeordnet werden oder sind falsch.",
+    "en": "No entry found for your credentials."
+  },
+  "logoutFederated": false,
+  "logoutLink": false,
+  "onLoginGuiAction": "reload",
+  "onLoginGuiActionRedirect": "",
+  "permissionSegments": "permission",
+  "profileLinkText": {
+    "de": "Profilseite",
+    "en": "Profile page"
+  },
+  "publisherUrls": false,
+  "pwLinkText": {
+    "de": "Passwort vergessen",
+    "en": "Forgot password"
+  },
+  "registerLinkText": {
+    "de": "Neu registrieren",
+    "en": "Register new"
+  },
+  "rememberMe": false,
+  "rememberMeDefault": false,
+  "restUrl": "/p",
+  "sessionCacheTime": 600,
+  "sessionTime": 3600,
+  "snippet": {
+    "loadWidget": {
+      "de": "Formular wird geladen ...",
+      "en": "Loading form ..."
+    },
+    "loadWidgetError": {
+      "de": "Formular konnte nicht geladen werden.",
+      "en": "Form could not be loaded."
+    }
+  },
+  "useLabelAsPlaceholder": false,
+  "usedLangs": [
+    "de",
+    "en"
+  ]
+}</config>
+    </plugininstance>
+  </plugininstances>
+</um>

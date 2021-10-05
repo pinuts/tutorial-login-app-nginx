@@ -3,8 +3,22 @@
     <head>
         <meta charset="utf-8">
         <title>Universal Messenger -- Private area</title>
+        <script src="/p/de.pinuts.cmsbs.auth2.Auth/c/my-app"></script>
     </head>
     <body>
         <h1>Private area...</h1>
+
+        <div id="pinuts-widgets-auth2-my-ap-loader" class="pinuts-widgets-loading">Formular wird geladen ...</div>
+        <script id="pinuts-widgets-auth2-my-ap">
+        (function() {
+            var errorHtml = "Formular konnte nicht geladen werden.";
+            var locale = "de";
+            var containerId = "pinuts-widgets-auth2-my-ap";
+
+            window.setTimeout(function(){var d = document.getElementById(containerId + '-loader');if (!d) return;d.setAttribute("class","pinuts-widgets-loading failed");d.innerHTML = errorHtml;}, 10000);
+            var script = document.createElement('script'); script.src = '/p/de.pinuts.cmsbs.auth2.Widget/index?name=my-app&containerId=' + containerId + '&locale=' + locale;
+            document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+        })();
+        </script>
     </body>
 </html>

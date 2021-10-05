@@ -5,12 +5,12 @@ UM_URL=http://localhost:8080
 OS=`uname`
 PWD=`pwd`
 OSR=`uname -r`
+DOCKER_OPTIONS="-p 8081:8081"
 
 if [ "$OS" == "Linux" ]; then
-	if [ "$OSR" == "5.4.72-microsoft-standard-WSL2" ]; then
-		# wsl2:
+	if [[ "$OSR" == *"microsoft-standard-WSL2"* ]]; then
+		# WSL 2:
 		IP4=`ip -o -4 addr list eth0 | awk '{print $$4}' | cut -d/ -f1`
-		DOCKER_OPTIONS="-p 8081:8081"
         UM_URL="http://${IP4}:8080"
     else
     	# Linux:
@@ -18,8 +18,6 @@ if [ "$OS" == "Linux" ]; then
 	fi
 else
 	# Darwin = Mac:
-	#  UM_URL muss sinnvoll gesetzt sein!
-	DOCKER_OPTIONS="-p 8081:8081"
 	UM_URL="http://host.docker.internal:8080"
 fi
 
